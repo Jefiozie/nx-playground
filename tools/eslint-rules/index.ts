@@ -1,4 +1,8 @@
 import {
+  RULE_NAME as enforceOutputMaxName,
+  rule as enforceOutputMax,
+} from './rules/enforce-output-max';
+import {
   RULE_NAME as enforceInputMaxName,
   rule as enforceInputMax,
 } from './rules/enforce-input-max';
@@ -27,5 +31,8 @@ module.exports = {
    *  [myCustomRuleName]: myCustomRule
    * }
    */
-  rules: { [enforceInputMaxName]: enforceInputMax },
+  rules: {
+    [enforceInputMaxName]: enforceInputMax,
+    [enforceOutputMaxName]: enforceOutputMax,
+  },
 };
