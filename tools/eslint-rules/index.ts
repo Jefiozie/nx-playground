@@ -1,4 +1,12 @@
 import {
+  RULE_NAME as enforceInjectMaxName,
+  rule as enforceInjectMax,
+} from './rules/enforce-inject-max';
+import {
+  RULE_NAME as enforceDiMaxName,
+  rule as enforceDiMax,
+} from './rules/enforce-constructor-di-max';
+import {
   RULE_NAME as enforceOutputMaxName,
   rule as enforceOutputMax,
 } from './rules/enforce-output-max';
@@ -34,5 +42,7 @@ module.exports = {
   rules: {
     [enforceInputMaxName]: enforceInputMax,
     [enforceOutputMaxName]: enforceOutputMax,
+    [enforceDiMaxName]: enforceDiMax,
+    [enforceInjectMaxName]: enforceInjectMax,
   },
 };

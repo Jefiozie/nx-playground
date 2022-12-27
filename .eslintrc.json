@@ -6,6 +6,8 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+        "@nrwl/nx/workspace/enforce-inject-max": "error",
+        "@nrwl/nx/workspace/enforce-constructor-di-max": "error",
         "@nrwl/nx/workspace/enforce-input-max": "error",
         "@nrwl/nx/workspace/enforce-output-max": "error",
         "@nrwl/nx/enforce-module-boundaries": [
