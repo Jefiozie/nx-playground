@@ -3,6 +3,8 @@
   "projects": {
     "app": "apps/app",
     "app-e2e": "apps/app-e2e",
-    "eslint-rules": "tools/eslint-rules"
+    "eslint-rules": "tools/eslint-rules",
+    "workspace-tools-plugin-angular": "libs/workspace-tools/plugin/angular",
+    "workspace-tools-plugin-angular-e2e": "apps/workspace-tools/plugin/angular-e2e"
   }
 }

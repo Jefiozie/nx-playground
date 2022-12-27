@@ -8,7 +8,11 @@
       "rules": {
         "max-lines": [
           "error",
-          { "max": 100, "skipComments": true, "skipBlankLines": true }
+          {
+            "max": 100,
+            "skipComments": true,
+            "skipBlankLines": true
+          }
         ],
         "@nrwl/nx/workspace/enforce-inject-max": "error",
         "@nrwl/nx/workspace/enforce-constructor-di-max": "error",
@@ -37,6 +41,11 @@
     {
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
       "rules": {}
     }
   ]

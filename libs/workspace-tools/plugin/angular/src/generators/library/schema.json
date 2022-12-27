@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "AngularLib",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?"
+    },
+    "tags": {
+      "type": "string",
+      "description": "Add tags to the project (used for linting)",
+      "alias": "t"
+    },
+    "directory": {
+      "type": "string",
+      "description": "A directory where the project is placed",
+      "alias": "d"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Domain name",
+      "alias": "d",
+      "enum": ["domain1", "domain2", "domain3", "domain4"]
+    },
+    "scope": {
+      "type": "string",
+      "description": "The npm scope",
+      "alias": "s",
+      "enum": ["company1", "company2", "company3", "shared"]
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of library",
+      "alias": "ty",
+      "enum": ["feature", "ui", "util", "data-access", "all"],
+      "x-prompt": {
+        "message": "Which type of library would you like to use?",
+        "type": "list",
+        "items": [
+          {
+            "value": "feature",
+            "label": "Feature"
+          },
+          {
+            "value": "ui",
+            "label": "Ui"
+          },
+          {
+            "value": "util",
+            "label": "Util"
+          },
+          {
+            "value": "data-access",
+            "label": "Data Access"
+          },
+          {
+            "value": "all",
+            "label": "All"
+          }
+        ]
+      }
+    }
+  },
+  "required": ["name", "domain", "scope", "type"]
+}

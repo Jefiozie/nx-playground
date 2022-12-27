@@ -1,0 +1,17 @@
+{
+  "name": "workspace-tools-plugin-angular-e2e",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/workspace-tools/plugin/angular-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/nx-plugin:e2e",
+      "options": {
+        "target": "workspace-tools-plugin-angular:build",
+        "jestConfig": "apps/workspace-tools/plugin/angular-e2e/jest.config.ts"
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["workspace-tools-plugin-angular"]
+}
