@@ -46,9 +46,9 @@ export const rule = ESLintUtils.RuleCreator(() => __filename)({
   },
   defaultOptions: [{ maxOutputs: 5 }],
   create(context, [{ maxOutputs }]) {
+    const maximumAllowedOutputs = maxOutputs;
     return {
       ClassBody(node): void {
-        const maximumAllowedOutputs = maxOutputs;
         const parent = node.parent as
           | TSESTree.ClassDeclaration
           | TSESTree.ClassExpression
