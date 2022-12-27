@@ -33,6 +33,10 @@
     "@angular/cli": "~15.0.0",
     "@angular/compiler-cli": "15.0.4",
     "@angular/language-service": "15.0.4",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@commitlint/config-nx-scopes": "^17.2.0",
+    "@commitlint/cz-commitlint": "^17.3.0",
     "@nrwl/cli": "15.4.1",
     "@nrwl/cypress": "15.4.1",
     "@nrwl/eslint-plugin-nx": "15.4.1",
@@ -47,7 +51,9 @@
     "@typescript-eslint/eslint-plugin": "5.47.0",
     "@typescript-eslint/parser": "5.47.0",
     "@typescript-eslint/utils": "^5.47.0",
+    "commitizen": "^4.2.6",
     "cypress": "^9.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
@@ -71,5 +77,10 @@
     "singleQuote": true,
     "trailingComma": "all",
     "printWidth": 120
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
