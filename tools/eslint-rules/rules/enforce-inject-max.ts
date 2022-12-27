@@ -1,8 +1,5 @@
-import {
-  ESLintUtils,
-  TSESTree,
-  AST_NODE_TYPES,
-} from '@typescript-eslint/utils';
+import { ESLintUtils, TSESTree, AST_NODE_TYPES } from '@typescript-eslint/utils';
+
 // NOTE: The rule will be available in ESLint configs as "@nrwl/nx/workspace/enforce-inject-max"
 export const RULE_NAME = 'enforce-inject-max';
 export type MessageIds = 'enforceInjectMax';
@@ -40,7 +37,7 @@ export const rule = ESLintUtils.RuleCreator(() => __filename)({
             node.value &&
             node.value.type === AST_NODE_TYPES.CallExpression &&
             node.value.callee.type === AST_NODE_TYPES.Identifier &&
-            node.value.callee.name === CALLEE_NAME
+            node.value.callee.name === CALLEE_NAME,
         );
         if (nodes.length > maxDI) {
           nodes.forEach((node) => {
