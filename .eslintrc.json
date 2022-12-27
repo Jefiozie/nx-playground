@@ -6,6 +6,10 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+        "max-lines": [
+          "error",
+          { "max": 100, "skipComments": true, "skipBlankLines": true }
+        ],
         "@nrwl/nx/workspace/enforce-inject-max": "error",
         "@nrwl/nx/workspace/enforce-constructor-di-max": "error",
         "@nrwl/nx/workspace/enforce-input-max": "error",
