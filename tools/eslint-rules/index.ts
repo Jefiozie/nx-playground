@@ -1,19 +1,11 @@
 import {
-  RULE_NAME as enforceInjectMaxName,
-  rule as enforceInjectMax,
-} from './rules/enforce-inject-max';
-import {
-  RULE_NAME as enforceDiMaxName,
-  rule as enforceDiMax,
-} from './rules/enforce-constructor-di-max';
-import {
-  RULE_NAME as enforceOutputMaxName,
-  rule as enforceOutputMax,
-} from './rules/enforce-output-max';
-import {
-  RULE_NAME as enforceInputMaxName,
-  rule as enforceInputMax,
-} from './rules/enforce-input-max';
+  RULE_NAME as preferStandaloneComponentName,
+  rule as preferStandaloneComponent,
+} from './rules/prefer-standalone-component';
+import { RULE_NAME as enforceInjectMaxName, rule as enforceInjectMax } from './rules/enforce-inject-max';
+import { RULE_NAME as enforceDiMaxName, rule as enforceDiMax } from './rules/enforce-constructor-di-max';
+import { RULE_NAME as enforceOutputMaxName, rule as enforceOutputMax } from './rules/enforce-output-max';
+import { RULE_NAME as enforceInputMaxName, rule as enforceInputMax } from './rules/enforce-input-max';
 /**
  * Import your custom workspace rules at the top of this file.
  *
@@ -44,5 +36,6 @@ module.exports = {
     [enforceOutputMaxName]: enforceOutputMax,
     [enforceDiMaxName]: enforceDiMax,
     [enforceInjectMaxName]: enforceInjectMax,
+    [preferStandaloneComponentName]: preferStandaloneComponent,
   },
 };
