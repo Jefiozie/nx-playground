@@ -17,6 +17,7 @@ variables:
         - package-lock.json
     paths:
       - .npm/
+      - node_modules/.cache/nx
   before_script:
     - npm ci --cache .npm --prefer-offline
     - NX_HEAD=$CI_COMMIT_SHA

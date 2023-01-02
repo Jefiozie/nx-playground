@@ -27,7 +27,8 @@
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {
-      "style": "css"
+      "style": "css",
+      "standalone": "true"
     }
   },
   "defaultProject": "app",
