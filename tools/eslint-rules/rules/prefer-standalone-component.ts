@@ -17,8 +17,8 @@ export const rule = ESLintUtils.RuleCreator(() => __filename)({
     },
     schema: [],
     messages: {
-      [MessageIds.PreferInlineStyles]: 'Prefer inline styles in Angular components.',
       [MessageIds.PreferInlineTemplate]: 'Prefer inline template in Angular components.',
+      [MessageIds.PreferInlineStyles]: 'Prefer inline styles in Angular components.',
     },
   },
   defaultOptions: [],
