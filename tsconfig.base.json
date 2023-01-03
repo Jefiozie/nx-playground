@@ -15,7 +15,32 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-playground/angular": ["libs/workspace-tools/plugin/angular/src/index.ts"]
+      "@nx-playground/angular": ["libs/workspace-tools/plugin/angular/src/index.ts"],
+      "@nx-playground/app0/lib0/lib0": ["libs/app0/lib0/lib0/src/index.ts"],
+      "@nx-playground/app0/lib1/lib1": ["libs/app0/lib1/lib1/src/index.ts"],
+      "@nx-playground/app0/lib2/lib2": ["libs/app0/lib2/lib2/src/index.ts"],
+      "@nx-playground/app0/lib3/lib3": ["libs/app0/lib3/lib3/src/index.ts"],
+      "@nx-playground/app0/lib4/lib4": ["libs/app0/lib4/lib4/src/index.ts"],
+      "@nx-playground/app1/lib0/lib0": ["libs/app1/lib0/lib0/src/index.ts"],
+      "@nx-playground/app1/lib1/lib1": ["libs/app1/lib1/lib1/src/index.ts"],
+      "@nx-playground/app1/lib2/lib2": ["libs/app1/lib2/lib2/src/index.ts"],
+      "@nx-playground/app1/lib3/lib3": ["libs/app1/lib3/lib3/src/index.ts"],
+      "@nx-playground/app1/lib4/lib4": ["libs/app1/lib4/lib4/src/index.ts"],
+      "@nx-playground/app2/lib0/lib0": ["libs/app2/lib0/lib0/src/index.ts"],
+      "@nx-playground/app2/lib1/lib1": ["libs/app2/lib1/lib1/src/index.ts"],
+      "@nx-playground/app2/lib2/lib2": ["libs/app2/lib2/lib2/src/index.ts"],
+      "@nx-playground/app2/lib3/lib3": ["libs/app2/lib3/lib3/src/index.ts"],
+      "@nx-playground/app2/lib4/lib4": ["libs/app2/lib4/lib4/src/index.ts"],
+      "@nx-playground/app3/lib0/lib0": ["libs/app3/lib0/lib0/src/index.ts"],
+      "@nx-playground/app3/lib1/lib1": ["libs/app3/lib1/lib1/src/index.ts"],
+      "@nx-playground/app3/lib2/lib2": ["libs/app3/lib2/lib2/src/index.ts"],
+      "@nx-playground/app3/lib3/lib3": ["libs/app3/lib3/lib3/src/index.ts"],
+      "@nx-playground/app3/lib4/lib4": ["libs/app3/lib4/lib4/src/index.ts"],
+      "@nx-playground/app4/lib0/lib0": ["libs/app4/lib0/lib0/src/index.ts"],
+      "@nx-playground/app4/lib1/lib1": ["libs/app4/lib1/lib1/src/index.ts"],
+      "@nx-playground/app4/lib2/lib2": ["libs/app4/lib2/lib2/src/index.ts"],
+      "@nx-playground/app4/lib3/lib3": ["libs/app4/lib3/lib3/src/index.ts"],
+      "@nx-playground/app4/lib4/lib4": ["libs/app4/lib4/lib4/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
