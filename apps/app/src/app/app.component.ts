@@ -12,7 +12,7 @@ export class AppComponent {
   @Input() input3!: string;
   @Input() input4!: string;
   @Input() input5!: string;
-  @Input() input6!: string;
+  // @Input() input6!: string;
 
   @Output() output1!: string;
   @Output() output2!: string;
