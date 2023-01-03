@@ -54,7 +54,7 @@ test:
     - npx nx affected --base=$NX_BASE --head=$NX_HEAD --target=test --parallel=3 --ci --code-coverage
 
 build:
-  stage: build
+  stage: test
   extends: .distributed
   script:
     - npx nx affected --base=$NX_BASE --head=$NX_HEAD --target=build --parallel=3
