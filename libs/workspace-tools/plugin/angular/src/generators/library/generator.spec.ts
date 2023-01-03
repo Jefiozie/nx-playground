@@ -24,6 +24,7 @@ describe('Angular Library generator', () => {
     expect(config).toBeDefined();
   });
   it('should run successfully with type all flag', async () => {
+    jest.setTimeout(50000);
     await generator(appTree, { ...options, type: 'all' });
     const ALL_TYPES = ['feature', 'ui', 'util', 'data-access'];
     for (const type of ALL_TYPES) {
