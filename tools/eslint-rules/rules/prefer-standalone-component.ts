@@ -4,8 +4,8 @@ import { getDecoratorPropertyValue } from '../utils';
 // NOTE: The rule will be available in ESLint configs as "@nrwl/nx/workspace/prefer-standalone-component"
 export const RULE_NAME = 'prefer-standalone-component';
 export const enum MessageIds {
-  PreferInlineStyles = 'prefer-inline-styles',
   PreferInlineTemplate = 'prefer-inline-template',
+  PreferInlineStyles = 'prefer-inline-styles',
 }
 export const rule = ESLintUtils.RuleCreator(() => __filename)({
   name: RULE_NAME,

@@ -12,7 +12,7 @@ export class AppComponent {
   @Input() input3!: string;
   @Input() input4!: string;
   @Input() input5!: string;
-  // @Input() input6!: string;
+  @Input() input6!: string;
 
   @Output() output1!: string;
   @Output() output2!: string;
@@ -33,7 +33,6 @@ export class AppComponent {
     private readonly zone: NgZone,
     private readonly ref: ChangeDetectorRef,
     @Inject('test') private readonly test: string,
-    @Inject('test2') private readonly test2: string,
-  ) // @Inject('test3') private readonly test3: string
-  {}
+    @Inject('test2') private readonly test2: string, // @Inject('test3') private readonly test3: string
+  ) {}
 }
