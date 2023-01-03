@@ -12,9 +12,7 @@ variables:
     - main
     - merge_requests
   cache:
-    key:
-      files:
-        - package-lock.json
+    key: 'NPM_DOWNLOAD_CACHE'
     paths:
       - .npm/
       - .cache/nx
@@ -22,6 +20,11 @@ variables:
     - npm ci --cache .npm --prefer-offline
     - NX_HEAD=$CI_COMMIT_SHA
     - NX_BASE=${CI_MERGE_REQUEST_DIFF_BASE_SHA:-$CI_COMMIT_BEFORE_SHA}
+    - echo "NX_HEAD=$NX_HEAD"
+    - echo "NX_BASE=$NX_BASE"
+    - echo "CI_COMMIT_SHA=$CI_COMMIT_SHA"
+    - echo "CI_COMMIT_BEFORE_SHA=$CI_COMMIT_BEFORE_SHA"
+    - echo "CI_MERGE_REQUEST_DIFF_BASE_SHA=$CI_MERGE_REQUEST_DIFF_BASE_SHA"
   artifacts:
     paths:
       - .cache/nx
