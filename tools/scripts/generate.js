@@ -70,7 +70,9 @@ export class AppModule {}
 }
 
 function generateParentLib(appName, libName) {
-  cp.execSync(`npx nx g @nrwl/angular:library ${libName} --directory=${appName}/${libName} --simpleModuleName`);
+  cp.execSync(
+    `npx nx g @nrwl/angular:library ${libName} --directory=${appName}/${libName} --simpleModuleName --buildable`,
+  );
   setTimeout(() => {}, 5);
 
   const libNames = [];
