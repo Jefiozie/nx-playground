@@ -33,7 +33,6 @@ export class AppComponent {
     private readonly zone: NgZone,
     private readonly ref: ChangeDetectorRef,
     @Inject('test') private readonly test: string,
-    @Inject('test2') private readonly test2: string,
-  ) // @Inject('test3') private readonly test3: string
-  {}
+    @Inject('test2') private readonly test2: string, // @Inject('test3') private readonly test3: string
+  ) {}
 }
