@@ -8,7 +8,7 @@ const ruleTester = new TSESLint.RuleTester({
 ruleTester.run(RULE_NAME, rule, {
   valid: [
     {
-      code: `@Component({ selector: 'my-component', template: '<div></div>' }) class MyComponent {}`,
+      code: `@Component({ selector: 'my-component', standalone: true, template: '<div></div>' }) class MyComponent {}`,
     },
   ],
   invalid: [
@@ -16,34 +16,15 @@ ruleTester.run(RULE_NAME, rule, {
       code: `@Component({ selector: 'my-component', styleUrls: ['./something.css'] }) class MyComponent {}`,
       errors: [
         {
-          messageId: MessageIds.PreferInlineStyles,
+          messageId: 'standaloneComp',
           line: 1,
-          column: 51,
-        },
-      ],
-    },
-    {
-      code: `@Component({ selector: 'my-component', templateUrl: './something.html' }) class MyComponent {}`,
-      errors: [
-        {
-          messageId: MessageIds.PreferInlineTemplate,
-          line: 1,
-          column: 53,
-        },
-      ],
-    },
-    {
-      code: `@Component({ selector: 'my-component', templateUrl: './something.html', styleUrls: ['./something.css'] }) class MyComponent {}`,
-      errors: [
-        {
-          messageId: MessageIds.PreferInlineTemplate,
-          line: 1,
-          column: 53,
-        },
-        {
-          messageId: MessageIds.PreferInlineStyles,
-          line: 1,
-          column: 84,
+          column: 1,
+          suggestions: [
+            {
+              messageId: 'addStandalone',
+              output: `@Component({ selector: 'my-component', standalone: true, styleUrls: ['./something.css'] }) class MyComponent {}`,
+            },
+          ],
         },
       ],
     },

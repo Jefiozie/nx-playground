@@ -14,6 +14,7 @@
             "skipBlankLines": true
           }
         ],
+        "@nrwl/nx/workspace/prefer-standalone-component": "warn",
         "@nrwl/nx/workspace/enforce-inject-max": "error",
         "@nrwl/nx/workspace/enforce-constructor-di-max": "error",
         "@nrwl/nx/workspace/enforce-input-max": "error",

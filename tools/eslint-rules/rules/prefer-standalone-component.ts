@@ -3,43 +3,42 @@ import { getDecoratorPropertyValue } from '../utils';
 
 // NOTE: The rule will be available in ESLint configs as "@nrwl/nx/workspace/prefer-standalone-component"
 export const RULE_NAME = 'prefer-standalone-component';
-export const enum MessageIds {
-  PreferInlineTemplate = 'prefer-inline-template',
-  PreferInlineStyles = 'prefer-inline-styles',
-}
+export type MessageIds = 'standaloneComp';
+
 export const rule = ESLintUtils.RuleCreator(() => __filename)({
   name: RULE_NAME,
   meta: {
-    type: 'problem',
+    type: 'suggestion',
     docs: {
-      description: ``,
-      recommended: 'error',
+      description: `This will warn if a component is not using the standalone: true option.`,
+      recommended: 'warn',
     },
+    hasSuggestions: true,
     schema: [],
     messages: {
-      [MessageIds.PreferInlineTemplate]: 'Prefer inline template in Angular components.',
-      [MessageIds.PreferInlineStyles]: 'Prefer inline styles in Angular components.',
+      ['standaloneComp']: 'Prefer standalone Angular components.',
+      ['addStandalone']: 'Add standalone: true to the @Component decorator',
     },
   },
   defaultOptions: [],
   create(context) {
     return {
       ['ClassDeclaration > Decorator[expression.callee.name="Component"]'](node: TSESTree.Decorator) {
-        const styleUrlsSelector = getDecoratorPropertyValue(node, 'styleUrls');
-        const templateUrlSelector = getDecoratorPropertyValue(node, 'templateUrl');
-        if (!styleUrlsSelector && !templateUrlSelector) {
-          return;
-        }
-        if (styleUrlsSelector) {
+        const standaloneSelector = getDecoratorPropertyValue(node, 'standalone');
+        if (standaloneSelector) return;
+        if (!standaloneSelector) {
           context.report({
-            node: styleUrlsSelector,
-            messageId: MessageIds.PreferInlineStyles,
-          });
-        }
-        if (templateUrlSelector) {
-          context.report({
-            node: templateUrlSelector,
-            messageId: MessageIds.PreferInlineTemplate,
+            node: node,
+            messageId: 'standaloneComp',
+            suggest: [
+              {
+                messageId: 'addStandalone',
+                fix: (fixer) => {
+                  const selectorNode = getDecoratorPropertyValue(node, 'selector');
+                  return [fixer.insertTextAfter(selectorNode, 'standalone: true,')];
+                },
+              },
+            ],
           });
         }
       },
