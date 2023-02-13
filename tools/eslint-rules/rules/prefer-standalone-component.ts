@@ -35,7 +35,7 @@ export const rule = ESLintUtils.RuleCreator(() => __filename)({
                 messageId: 'addStandalone',
                 fix: (fixer) => {
                   const selectorNode = getDecoratorPropertyValue(node, 'selector');
-                  return [fixer.insertTextAfter(selectorNode, 'standalone: true,')];
+                  return [fixer.insertTextAfter(selectorNode, ', standalone: true')];
                 },
               },
             ],
