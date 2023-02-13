@@ -36,7 +36,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.nrwl-workspace-outdated.outputs.outdated == 'true'
-        run: npm install
+        run: npm install --force
 
       - name: Check if has migrations
         id: nrwl-workspace-has-migrations
